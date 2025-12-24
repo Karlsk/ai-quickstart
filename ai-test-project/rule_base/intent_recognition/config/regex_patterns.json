@@ -1,0 +1,56 @@
+{
+  "intents": {
+    "book_flight": [
+      {
+        "pattern": "从(?P<departure_city>.+?)到(?P<arrival_city>.+?)的机票",
+        "flags": "i"
+      },
+      {
+        "pattern": "预订(?P<departure_date>\\d{4}-\\d{1,2}-\\d{1,2})从(?P<departure_city>.+?)到(?P<arrival_city>.+?)的机票",
+        "flags": "i"
+      },
+      {
+        "pattern": "(?P<departure_date>\\d{1,2}月\\d{1,2}日)从(?P<departure_city>.+?)飞(?P<arrival_city>.+)",
+        "flags": "i"
+      }
+    ],
+    "query_order": [
+      {
+        "pattern": "查询订单(?P<order_id>\\w+)",
+        "flags": "i"
+      },
+      {
+        "pattern": "订单号(?P<order_id>\\w+)的状态",
+        "flags": "i"
+      }
+    ],
+    "cancel_order": [
+      {
+        "pattern": "取消订单(?P<order_id>\\w+)",
+        "flags": "i"
+      },
+      {
+        "pattern": "退订(?P<order_id>\\w+)",
+        "flags": "i"
+      }
+    ]
+  },
+  "slots": {
+    "departure_date": [
+      {
+        "pattern": "(?P<departure_date>\\d{4}-\\d{1,2}-\\d{1,2})",
+        "flags": "i"
+      },
+      {
+        "pattern": "(?P<departure_date>\\d{1,2}月\\d{1,2}日)",
+        "flags": "i"
+      }
+    ],
+    "order_id": [
+      {
+        "pattern": "(?P<order_id>[A-Z0-9]{8,})",
+        "flags": "i"
+      }
+    ]
+  }
+}

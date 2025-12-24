@@ -1,0 +1,20 @@
+{
+  "book_flight": {
+    "keywords": ["机票", "航班", "飞机", "预订", "订票"],
+    "must_keywords": [],
+    "exclude_keywords": ["退票", "退款", "取消"],
+    "weight": 1.0
+  },
+  "query_order": {
+    "keywords": ["订单", "查询", "查看", "状态"],
+    "must_keywords": ["订单"],
+    "exclude_keywords": ["取消", "退款"],
+    "weight": 1.0
+  },
+  "cancel_order": {
+    "keywords": ["取消", "退票", "退款"],
+    "must_keywords": [],
+    "exclude_keywords": [],
+    "weight": 1.2
+  }
+}

@@ -78,9 +78,14 @@ class RuleBasedIntentChain:
         regex_result = self.regex_parser.parse(text)  # 正则匹配解析
         keyword_result = self.keyword_parser.parse(text)  # 关键词匹配解析
 
+        print(f"[Debug] Regex Result: {regex_result}")
+        print(f"[Debug] Keyword Result: {keyword_result}")
+
         # 步骤3: 融合多个解析器的结果
         # 使用智能策略选择最佳结果
         final_result = self._merge_results([regex_result, keyword_result])
+
+        print(f"[Debug] Final Merged Result: {final_result}")
 
         # 步骤4: 基于最终意图提取槽位信息
         slots = self.slot_extractor.extract_slots(text, final_result.intent)

@@ -1,0 +1,51 @@
+{
+  "unknown_intent": "unknown",
+  "intents": [
+    {
+      "name": "book_flight",
+      "description": "预订机票",
+      "priority": 100,
+      "slots": [
+        {
+          "name": "departure_city",
+          "required": true,
+          "type": "str"
+        },
+        {
+          "name": "arrival_city",
+          "required": true,
+          "type": "str"
+        },
+        {
+          "name": "departure_date",
+          "required": true,
+          "type": "date"
+        }
+      ]
+    },
+    {
+      "name": "query_order",
+      "description": "查询订单状态",
+      "priority": 90,
+      "slots": [
+        {
+          "name": "order_id",
+          "required": true,
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "cancel_order",
+      "description": "取消订单",
+      "priority": 85,
+      "slots": [
+        {
+          "name": "order_id",
+          "required": true,
+          "type": "str"
+        }
+      ]
+    }
+  ]
+}

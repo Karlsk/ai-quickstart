@@ -1,0 +1,25 @@
+{
+  "excel_analyzer": {
+    "description": "Excel 中断数据分析配置",
+    "default_excel_type": "merged",
+    "duration_threshold": 15.0,
+    "ignore_no_interruption": true,
+    "segment_pattern": "^(\\d{8}-\\d+-\\d+-\\d+-\\d+-CSCN-A0007-CSCN-A0026)",
+    "excel_types": {
+      "merged": {
+        "description": "旧格式 - 多个 sheet，行合并",
+        "excel_path": "execl/StatisticsOnDisconnectedService_merged_files_20251209_152318.xlsx",
+        "sheet_name": "Merged_CSCN_A0007_CSCN_A002",
+        "has_row_merge": true,
+        "multi_sheet": true
+      },
+      "standardized": {
+        "description": "新格式 - 单个 sheet，无行合并",
+        "excel_path": "execl/StatisticsOnDisconnectedService_standardized_20251209_152318.xlsx",
+        "sheet_name": "Sheet1",
+        "has_row_merge": false,
+        "multi_sheet": false
+      }
+    }
+  }
+}
